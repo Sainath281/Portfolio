@@ -13,6 +13,8 @@
     justify-content: center;     
     align-items: center;         
     margin-bottom: 40px; 
+    margin-left: 50%;        
+    height: 80px;               
     width: 100%;  
 }
 
@@ -54,7 +56,7 @@ body {
 /* Container for cards */
 .container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);  /* Default to 3 columns */
+    grid-template-columns: repeat(2, 1fr);  
     gap: 30px;
     padding: 0 10%;
 }
@@ -121,40 +123,13 @@ body {
 /* Media Query for Tablet (screen width 768px and below) */
 @media (max-width: 768px) {
     .container {
-        grid-template-columns: repeat(2, 1fr);  /* 2 columns for tablet screens */
+        grid-template-columns: repeat(2, 1fr);  
     }
 }
 
 /* Media Query for Mobile (screen width 480px and below) */
 @media (max-width: 480px) {
     .container {
-        grid-template-columns: 1fr;  /* 1 column for mobile screens */
-        padding: 0 5%; /* Adjust padding for smaller screens */
-    }
-    
-    /* Reduce title font size on mobile */
-    .title {
-        font-size: 2rem;
-    }
-
-    /* Adjust card padding for mobile */
-    .card {
-        padding: 15px;
-    }
-    
-    /* Adjust card title font size for mobile */
-    .card h3 {
-        font-size: 1.2rem;
-    }
-
-    /* Adjust card description font size for mobile */
-    .card p {
-        font-size: 0.9rem;
-    }
-    
-    /* Adjust button font size for mobile */
-    .card .button {
-        font-size: 0.9rem;
-        padding: 6px 15px;
+        grid-template-columns: 1fr;  
     }
 }
