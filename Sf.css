@@ -1,3 +1,4 @@
+
 /* Import Poppins font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
@@ -24,7 +25,7 @@ body {
 /* Container with border */
 .container {
   padding: 0 5%;
-  border: 1px solid #ed; 
+  border: 1px solid ed; 
 }
 
 /* Home Section */
@@ -104,6 +105,17 @@ a.btn:hover {
   background: rgb(243, 113, 7);
   color: rgb(49, 30, 30);
 }
+
+
+
+
+
+
+
+
+
+
+
 
 /* About Section */
 .About {
@@ -258,10 +270,9 @@ a.btn:hover {
   color: #fcd151;
 }
 
-/* For desktop and larger screens */
 .Project .container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns on large screens */
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   padding: 60px;
 }
@@ -317,55 +328,6 @@ a.btn:hover {
   background-color: #f9b509;
 }
 
-/* For tablets and mobile (screen width 768px or smaller) */
-@media (max-width: 768px) {
-  .Project .container {
-    grid-template-columns: 1fr; /* 1 column on smaller screens */
-    padding: 30px;
-  }
-
-  .project .imgBx {
-    height: 200px; /* Reduced image height for mobile */
-  }
-
-  .project .card h3 {
-    font-size: 1rem; /* Slightly smaller text on mobile */
-  }
-
-  .project .card p {
-    font-size: 0.9rem; /* Slightly smaller text on mobile */
-  }
-
-  .project .button {
-    padding: 6px 30px; /* Adjusted button size for mobile */
-    font-size: 0.9rem; /* Adjusted button text size for mobile */
-  }
-}
-
-/* For very small screens (max-width: 480px) */
-@media (max-width: 480px) {
-  .title h2 {
-    font-size: 1.6rem; /* Adjust title size for smaller screens */
-  }
-
-  .project .imgBx {
-    height: 180px; /* Further reduced image height */
-  }
-
-  .project .card h3 {
-    font-size: 0.9rem; /* Smaller text size on very small screens */
-  }
-
-  .project .card p {
-    font-size: 0.8rem; /* Smaller paragraph text */
-  }
-
-  .project .button {
-    padding: 5px 25px; /* Adjusted button size for smaller screens */
-    font-size: 0.8rem; /* Smaller button text */
-  }
-}
-
 /* Footer Section */
 footer {
   width: 100%;
@@ -404,27 +366,6 @@ footer {
 
 /* Media Queries */
 
-/* For devices with width 1200px or above (Desktops and large screens) */
-@media (min-width: 1200px) {
-  .home .container {
-    padding: 100px;
-    flex-direction: row;
-    justify-content: flex-end;
-  }
-
-
-}
-
-/* For devices with width between 768px and 1199px (tablets and small desktops) */
-@media (min-width: 768px) and (max-width: 1199px) {
-  .home .container {
-    padding: 60px;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-}
-
 /* For devices with width 768px or below (tablets and mobile) */
 @media (max-width: 768px) {
   .home .container {
@@ -433,10 +374,19 @@ footer {
     align-items: flex-start;
   }
 
+  .home .content {
+    width: 100%;
+    padding-left: 0;
+  }
+
   .Glass .container {
     flex-direction: column;
     width: 100%;
     gap: 15px;
+  }
+
+  .Project .container {
+    grid-template-columns: 1fr; 
   }
 
   footer {
