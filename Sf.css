@@ -258,9 +258,10 @@ a.btn:hover {
   color: #fcd151;
 }
 
+/* For desktop and larger screens */
 .Project .container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr); /* 2 columns on large screens */
   gap: 20px;
   padding: 60px;
 }
@@ -316,6 +317,55 @@ a.btn:hover {
   background-color: #f9b509;
 }
 
+/* For tablets and mobile (screen width 768px or smaller) */
+@media (max-width: 768px) {
+  .Project .container {
+    grid-template-columns: 1fr; /* 1 column on smaller screens */
+    padding: 30px;
+  }
+
+  .project .imgBx {
+    height: 200px; /* Reduced image height for mobile */
+  }
+
+  .project .card h3 {
+    font-size: 1rem; /* Slightly smaller text on mobile */
+  }
+
+  .project .card p {
+    font-size: 0.9rem; /* Slightly smaller text on mobile */
+  }
+
+  .project .button {
+    padding: 6px 30px; /* Adjusted button size for mobile */
+    font-size: 0.9rem; /* Adjusted button text size for mobile */
+  }
+}
+
+/* For very small screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .title h2 {
+    font-size: 1.6rem; /* Adjust title size for smaller screens */
+  }
+
+  .project .imgBx {
+    height: 180px; /* Further reduced image height */
+  }
+
+  .project .card h3 {
+    font-size: 0.9rem; /* Smaller text size on very small screens */
+  }
+
+  .project .card p {
+    font-size: 0.8rem; /* Smaller paragraph text */
+  }
+
+  .project .button {
+    padding: 5px 25px; /* Adjusted button size for smaller screens */
+    font-size: 0.8rem; /* Smaller button text */
+  }
+}
+
 /* Footer Section */
 footer {
   width: 100%;
@@ -362,9 +412,7 @@ footer {
     justify-content: flex-end;
   }
 
-  .Project .container {
-    grid-template-columns: repeat(3, 1fr);
-  }
+
 }
 
 /* For devices with width between 768px and 1199px (tablets and small desktops) */
@@ -375,9 +423,6 @@ footer {
     align-items: flex-start;
   }
 
-  .Project .container {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 /* For devices with width 768px or below (tablets and mobile) */
@@ -386,10 +431,6 @@ footer {
     padding: 50px;
     flex-direction: column;
     align-items: flex-start;
-  }
-
-  .Project .container {
-    grid-template-columns: 1fr;
   }
 
   .Glass .container {
