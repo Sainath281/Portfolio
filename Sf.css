@@ -24,7 +24,7 @@ body {
 /* Container with border */
 .container {
   padding: 0 5%;
-  border: 1px solid ed; 
+  border: 1px solid #ed; 
 }
 
 /* Home Section */
@@ -104,17 +104,6 @@ a.btn:hover {
   background: rgb(243, 113, 7);
   color: rgb(49, 30, 30);
 }
-
-
-
-
-
-
-
-
-
-
-
 
 /* About Section */
 .About {
@@ -365,6 +354,32 @@ footer {
 
 /* Media Queries */
 
+/* For devices with width 1200px or above (Desktops and large screens) */
+@media (min-width: 1200px) {
+  .home .container {
+    padding: 100px;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .Project .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* For devices with width between 768px and 1199px (tablets and small desktops) */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .home .container {
+    padding: 60px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .Project .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 /* For devices with width 768px or below (tablets and mobile) */
 @media (max-width: 768px) {
   .home .container {
@@ -373,19 +388,14 @@ footer {
     align-items: flex-start;
   }
 
-  .home .content {
-    width: 100%;
-    padding-left: 0;
+  .Project .container {
+    grid-template-columns: 1fr;
   }
 
   .Glass .container {
     flex-direction: column;
     width: 100%;
     gap: 15px;
-  }
-
-  .Project .container {
-    grid-template-columns: 1fr; 
   }
 
   footer {
